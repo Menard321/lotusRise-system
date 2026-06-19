@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         // ────────────────────────────────────────────────
         User::updateOrCreate(
             ['email' => 'admin@lotusriseglobal.com'],
-            ['name' => 'LotusRise Admin', 'password' => Hash::make('Admin@2026!'), 'role' => 'admin']
+            ['name' => 'LotusRise Admin', 'password' => Hash::make('password'), 'role' => 'admin']
         );
 
         // ────────────────────────────────────────────────
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         // ────────────────────────────────────────────────
         $vendorUser = User::updateOrCreate(
             ['email' => 'vendor@lotusriseglobal.com'],
-            ['name' => 'Kariakoo Wholesale Ltd', 'password' => Hash::make('Vendor@2026!'), 'role' => 'vendor']
+            ['name' => 'Kariakoo Wholesale Ltd', 'password' => Hash::make('password'), 'role' => 'vendor']
         );
 
         Vendor::updateOrCreate(
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
         // ────────────────────────────────────────────────
         $agentUser = User::updateOrCreate(
             ['email' => 'agent@lotusriseglobal.com'],
-            ['name' => 'Sarah Joseph', 'password' => Hash::make('Agent@2026!'), 'role' => 'agent']
+            ['name' => 'Sarah Joseph', 'password' => Hash::make('password'), 'role' => 'agent']
         );
 
         Agent::updateOrCreate(

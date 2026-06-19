@@ -62,11 +62,15 @@
             </div>
 
             <!-- Submit -->
-            <div>
+            <div class="space-y-4">
                 <button type="submit"
                     class="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl text-sm font-semibold text-[#0D0C0A] bg-[#C5A85A] hover:bg-[#C5A85A]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0D0C0A] focus:ring-[#C5A85A] shadow-md transition duration-200">
                     Sign In
                 </button>
+                <div class="text-center pt-2">
+                    <span class="text-xs text-[#FAF8F5]/60">New to LotusRise? </span>
+                    <a href="{{ route('register') }}" class="text-xs text-[#C5A85A] font-semibold hover:underline">I don't have an account</a>
+                </div>
             </div>
         </form>
 

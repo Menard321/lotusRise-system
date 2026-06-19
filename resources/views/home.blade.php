@@ -16,10 +16,16 @@
                     One Platform. Endless Opportunities.
                 </div>
                 
-                <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-[#0D0C0A] leading-[1.08] text-center lg:text-left">
-                    <span class="block"><span class="text-[#C5A85A]">Shop</span> Smart.</span>
-                    <span class="block"><span class="text-[#C5A85A]">Earn</span> Smart.</span>
-                    <span class="block"><span class="text-[#C5A85A]">Grow</span> Smart.</span>
+                <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-[#0D0C0A] leading-[1.1] text-center lg:text-left flex flex-col gap-1.5">
+                    <span id="text-scene-0" class="block transition-all duration-700 ease-out will-change-transform cursor-pointer origin-left">
+                        <span class="text-[#C5A85A]">Shop</span> Smart.
+                    </span>
+                    <span id="text-scene-1" class="block transition-all duration-700 ease-out will-change-transform cursor-pointer opacity-30 origin-left">
+                        <span class="text-[#C5A85A]">Earn</span> Smart.
+                    </span>
+                    <span id="text-scene-2" class="block transition-all duration-700 ease-out will-change-transform cursor-pointer opacity-30 origin-left">
+                        <span class="text-[#C5A85A]">Grow</span> Smart.
+                    </span>
                 </h1>
                 
                 <p class="text-base sm:text-lg text-[#1D1B18]/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -28,29 +34,63 @@
                 
                 <!-- Hero Action Buttons -->
                 <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-2">
-                    <a href="{{ route('services') }}#marketplace" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A85A] hover:bg-[#C5A85A]/90 text-[#0D0C0A] font-bold rounded-xl shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="{{ route('services') }}#marketplace" id="btn-scene-0" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A85A] text-[#0D0C0A] font-bold rounded-xl shadow-md transition duration-300 border border-transparent">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span>Start Shopping</span>
                     </a>
-                    <a href="{{ route('vendors') }}" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#0D0C0A] hover:bg-[#0D0C0A]/90 text-[#FAF8F5] font-bold rounded-xl shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="{{ route('vendors') }}" id="btn-scene-1" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#0D0C0A] text-[#FAF8F5] font-bold rounded-xl shadow-md transition duration-300 border border-transparent">
                         <i class="fa-solid fa-store"></i>
                         <span>Become a Vendor</span>
                     </a>
-                    <a href="{{ route('agents') }}" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white border border-[#0D0C0A]/10 hover:border-[#0D0C0A] text-[#0D0C0A] font-bold rounded-xl shadow-sm transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="{{ route('agents') }}" id="btn-scene-2" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white border border-[#0D0C0A]/10 text-[#0D0C0A] font-bold rounded-xl shadow-sm transition duration-300">
                         <i class="fa-solid fa-user-tie"></i>
                         <span>Become an Agent</span>
                     </a>
                 </div>
             </div>
             
-            <!-- Right Graphic Column (Composite Image) -->
-            <div class="lg:col-span-6 relative flex justify-center items-center">
+            <!-- Right Graphic Column (Composite Multi-Scene Slider) -->
+            <div class="lg:col-span-6 relative flex flex-col justify-center items-center">
                 <!-- Outer glow rings -->
                 <div class="absolute w-[120%] h-[120%] rounded-full bg-[#C5A85A]/5 filter blur-3xl pointer-events-none"></div>
                 
-                <div class="relative w-full max-w-md sm:max-w-xl flex items-center justify-center">
-                    <img src="{{ asset('images/hero_composite.png') }}" alt="LotusRise Ecosystem Mockup" 
-                        class="w-full h-auto rounded-3xl object-cover shadow-2xl border border-gray-100/30">
+                <div class="relative w-full max-w-md sm:max-w-xl aspect-square flex items-center justify-center">
+                    <!-- Card Scene 1: Shop Smart -->
+                    <div id="img-scene-0" class="absolute inset-0 transition-scene opacity-100 scale-100 translate-x-0 z-10 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
+                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
+                            <img src="{{ asset('images/lotusRise_shop_ecosystem.png') }}" alt="Shop Smart - E-Commerce Ecosystem" 
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        </div>
+                    </div>
+                    
+                    <!-- Card Scene 2: Earn Smart -->
+                    <div id="img-scene-1" class="absolute inset-0 transition-scene opacity-0 scale-95 translate-x-8 z-0 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
+                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
+                            <img src="{{ asset('images/lotusRise_express_logistics.jpg') }}" alt="Earn Smart - Logistics & Fleet" 
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        </div>
+                    </div>
+                    
+                    <!-- Card Scene 3: Grow Smart -->
+                    <div id="img-scene-2" class="absolute inset-0 transition-scene opacity-0 scale-95 translate-x-8 z-0 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
+                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
+                            <img src="{{ asset('images/lotusRise_analytics_growth.png') }}" alt="Grow Smart - Vendor Analytics" 
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Progress Indicators (Pills) -->
+                <div class="flex justify-center items-center gap-3 mt-8 z-20">
+                    <button id="indicator-pill-0" class="group relative w-16 h-1.5 rounded-full bg-black/10 overflow-hidden focus:outline-none transition hover:bg-black/20" title="Shop Smart">
+                        <span class="progress-pill-fill absolute left-0 top-0 bottom-0 w-0 bg-[#C5A85A] rounded-full"></span>
+                    </button>
+                    <button id="indicator-pill-1" class="group relative w-16 h-1.5 rounded-full bg-black/10 overflow-hidden focus:outline-none transition hover:bg-black/20" title="Earn Smart">
+                        <span class="progress-pill-fill absolute left-0 top-0 bottom-0 w-0 bg-[#C5A85A] rounded-full"></span>
+                    </button>
+                    <button id="indicator-pill-2" class="group relative w-16 h-1.5 rounded-full bg-black/10 overflow-hidden focus:outline-none transition hover:bg-black/20" title="Grow Smart">
+                        <span class="progress-pill-fill absolute left-0 top-0 bottom-0 w-0 bg-[#C5A85A] rounded-full"></span>
+                    </button>
                 </div>
             </div>
             
@@ -139,6 +179,22 @@
             </div>
 
         </div>
+    </div>
+</section>
+
+<!-- Section: Lotus AI Console -->
+<section id="lotus-ai" class="py-24 bg-[#0D0C0A] text-[#FAF8F5] relative overflow-hidden border-t border-[#1D1B18]/5">
+    <!-- Ambient luxury background glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-[#C5A85A]/5 filter blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <span class="text-xs uppercase tracking-[0.2em] font-extrabold text-[#C5A85A]">Central Intelligence</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Lotus AI Intelligent Terminal</h2>
+            <p class="text-base text-[#FAF8F5]/60 max-w-xl mx-auto">Analyze customs compliance, calculate EAC dynamic shipping tariffs, request freight routes, or talk directly with our voice copilot.</p>
+        </div>
+        
+        <x-lotus-ai-console />
     </div>
 </section>
 
@@ -437,5 +493,169 @@
         </div>
     </div>
 </section>
+
+@section('scripts')
+<style>
+    .transition-scene {
+        transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1), opacity 800ms cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+    }
+    
+    @keyframes goldGlowPulse {
+        0%, 100% {
+            box-shadow: 0 0 15px rgba(197, 168, 90, 0.15);
+        }
+        50% {
+            box-shadow: 0 0 25px rgba(197, 168, 90, 0.45);
+        }
+    }
+    
+    .cta-active-glow {
+        transform: scale(1.02) !important;
+        animation: goldGlowPulse 2.5s infinite ease-in-out;
+        border-color: #C5A85A !important;
+    }
+
+    .text-active-glow {
+        transform: scale(1.02);
+        opacity: 1 !important;
+    }
+    
+    .text-inactive {
+        opacity: 0.3;
+    }
+
+    .hover-tilt-effect {
+        transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .hover-tilt-effect:hover {
+        transform: translateY(-8px) scale(1.01) !important;
+        box-shadow: 0 30px 60px rgba(197, 168, 90, 0.15) !important;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let currentScene = 0;
+        const totalScenes = 3;
+        const intervalTime = 6000;
+        let intervalId = null;
+        const progressPills = document.querySelectorAll('.progress-pill-fill');
+
+        const scenes = [
+            { textId: 'text-scene-0', btnId: 'btn-scene-0', imgId: 'img-scene-0' },
+            { textId: 'text-scene-1', btnId: 'btn-scene-1', imgId: 'img-scene-1' },
+            { textId: 'text-scene-2', btnId: 'btn-scene-2', imgId: 'img-scene-2' }
+        ];
+
+        function setScene(index) {
+            // Reset progress bars
+            progressPills.forEach((pill) => {
+                pill.style.width = '0%';
+                pill.style.transition = 'none';
+            });
+
+            scenes.forEach((scene, i) => {
+                const imgEl = document.getElementById(scene.imgId);
+                const textEl = document.getElementById(scene.textId);
+                const btnEl = document.getElementById(scene.btnId);
+
+                if (i === index) {
+                    // Active / Entering
+                    imgEl.classList.remove('opacity-0', 'scale-95', 'translate-x-8', '-translate-x-8', 'z-0', 'pointer-events-none');
+                    imgEl.classList.add('opacity-100', 'scale-100', 'translate-x-0', 'z-10', 'pointer-events-auto');
+
+                    textEl.classList.remove('text-inactive');
+                    textEl.classList.add('text-active-glow');
+
+                    btnEl.classList.add('cta-active-glow');
+                } else if (i === currentScene) {
+                    // Exiting to left
+                    imgEl.classList.remove('opacity-100', 'scale-100', 'translate-x-0', 'translate-x-8', 'z-10', 'pointer-events-auto');
+                    imgEl.classList.add('opacity-0', 'scale-95', '-translate-x-8', 'z-0', 'pointer-events-none');
+
+                    textEl.classList.remove('text-active-glow');
+                    textEl.classList.add('text-inactive');
+
+                    btnEl.classList.remove('cta-active-glow');
+                } else {
+                    // Idle in queue (right side)
+                    imgEl.classList.remove('opacity-100', 'scale-100', 'translate-x-0', '-translate-x-8', 'z-10', 'pointer-events-auto');
+                    imgEl.classList.add('opacity-0', 'scale-95', 'translate-x-8', 'z-0', 'pointer-events-none');
+
+                    textEl.classList.remove('text-active-glow');
+                    textEl.classList.add('text-inactive');
+
+                    btnEl.classList.remove('cta-active-glow');
+                }
+            });
+
+            currentScene = index;
+
+            // Trigger progress bar filling
+            setTimeout(() => {
+                const activePill = progressPills[index];
+                if (activePill) {
+                    activePill.style.transition = 'width 6000ms linear';
+                    activePill.style.width = '100%';
+                }
+            }, 50);
+        }
+
+        function startLoop() {
+            if (intervalId) clearInterval(intervalId);
+            
+            // Initial transition for current scene progress pill
+            const activePill = progressPills[currentScene];
+            if (activePill) {
+                activePill.style.transition = 'width 6000ms linear';
+                activePill.style.width = '100%';
+            }
+
+            intervalId = setInterval(() => {
+                let nextScene = (currentScene + 1) % totalScenes;
+                setScene(nextScene);
+            }, intervalTime);
+        }
+
+        // Set initial state styling
+        scenes.forEach((scene, i) => {
+            const textEl = document.getElementById(scene.textId);
+            const btnEl = document.getElementById(scene.btnId);
+            if (i === 0) {
+                textEl.classList.add('text-active-glow');
+                btnEl.classList.add('cta-active-glow');
+            } else {
+                textEl.classList.add('text-inactive');
+            }
+        });
+
+        // Add event listeners for click triggers
+        scenes.forEach((scene, index) => {
+            const textEl = document.getElementById(scene.textId);
+            if (textEl) {
+                textEl.addEventListener('click', () => {
+                    if (index !== currentScene) {
+                        setScene(index);
+                        startLoop();
+                    }
+                });
+            }
+
+            const indicator = document.getElementById(`indicator-pill-${index}`);
+            if (indicator) {
+                indicator.addEventListener('click', () => {
+                    if (index !== currentScene) {
+                        setScene(index);
+                        startLoop();
+                    }
+                });
+            }
+        });
+
+        startLoop();
+    });
+</script>
+@endsection
 
 @endsection

@@ -50,9 +50,9 @@ class PagesController extends Controller
         ];
 
         $team = [
-            ['name' => 'Menard L. Rose', 'role' => 'Chief Executive Officer', 'image' => 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300&h=300'],
-            ['name' => 'Fatuma Bakari', 'role' => 'Director of Logistics & Operations', 'image' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300'],
-            ['name' => 'Emmanuel Minja', 'role' => 'Head of Technology & Product', 'image' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300&h=300'],
+            ['name' => 'Menard L. Rose', 'role' => 'Chief Executive Officer', 'image' => '/images/menard.png'],
+            ['name' => 'Fatuma Bakari', 'role' => 'Director of Logistics & Operations', 'image' => '/images/fatuma.png'],
+            ['name' => 'Emmanuel Minja', 'role' => 'Head of Technology & Product', 'image' => '/images/emmanuel.png'],
         ];
 
         return view('about', compact('faqs', 'team'));

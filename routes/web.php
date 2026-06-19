@@ -8,6 +8,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\LotusAIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::post('/vendors/register', [VendorController::class, 'register'])->name('v
 Route::post('/agents/register', [AgentController::class, 'register'])->name('agents.register');
 Route::post('/contact/inquire', [LeadController::class, 'inquire'])->name('contact.inquire');
 Route::post('/careers/apply', [PagesController::class, 'apply'])->name('careers.apply');
+Route::post('/lotus-ai/query', [LotusAIController::class, 'query'])->name('lotus-ai.query');
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +44,8 @@ Route::post('/careers/apply', [PagesController::class, 'apply'])->name('careers.
 */
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 /*

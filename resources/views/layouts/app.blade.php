@@ -30,11 +30,11 @@
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <!-- Left Info -->
             <div class="flex flex-wrap justify-center sm:justify-start items-center gap-x-6 gap-y-1">
-                <a href="tel:+255742123456" class="hover:text-[#C5A85A] transition duration-150 flex items-center gap-1.5">
+                <a href="tel:+255717961380" class="hover:text-[#C5A85A] transition duration-150 flex items-center gap-1.5">
                     <i class="fa-solid fa-phone text-[#C5A85A]"></i>
-                    <span>+255 742 123 456</span>
+                    <span>0717961380</span>
                 </a>
-                <a href="https://wa.me/255742123456" target="_blank" class="hover:text-[#C5A85A] transition duration-150 flex items-center gap-1.5">
+                <a href="https://wa.me/255717961380" target="_blank" class="hover:text-[#C5A85A] transition duration-150 flex items-center gap-1.5">
                     <i class="fa-brands fa-whatsapp text-green-500"></i>
                     <span>WhatsApp Us</span>
                 </a>

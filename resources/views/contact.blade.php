@@ -31,14 +31,14 @@
                         <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
                         <div>
                             <span class="block font-bold text-[#0D0C0A]">Call Support</span>
-                            <a href="tel:+255742123456" class="text-gray-500 hover:text-[#C5A85A]">+255 742 123 456</a>
+                            <a href="tel:+255717961380" class="text-gray-500 hover:text-[#C5A85A]">0717961380</a>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
                         <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center shrink-0"><i class="fa-brands fa-whatsapp text-emerald-600"></i></div>
                         <div>
                             <span class="block font-bold text-[#0D0C0A]">WhatsApp Chat</span>
-                            <a href="https://wa.me/255742123456" target="_blank" class="text-gray-500 hover:text-[#C5A85A]">WhatsApp Us Directly</a>
+                            <a href="https://wa.me/255717961380" target="_blank" class="text-gray-500 hover:text-[#C5A85A]">WhatsApp Us Directly</a>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
