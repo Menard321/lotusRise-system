@@ -1,0 +1,441 @@
+@extends('layouts.app')
+
+@section('title', 'LotusRise Global — Shop Smart. Earn Smart. Grow Smart.')
+
+@section('content')
+
+<!-- Section 3 – Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Content Column -->
+            <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C5A85A]/10 border border-[#C5A85A]/20 text-[#C5A85A] text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#C5A85A]"></span>
+                    One Platform. Endless Opportunities.
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-[#0D0C0A] leading-[1.08] text-center lg:text-left">
+                    <span class="block"><span class="text-[#C5A85A]">Shop</span> Smart.</span>
+                    <span class="block"><span class="text-[#C5A85A]">Earn</span> Smart.</span>
+                    <span class="block"><span class="text-[#C5A85A]">Grow</span> Smart.</span>
+                </h1>
+                
+                <p class="text-base sm:text-lg text-[#1D1B18]/70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    LotusRise connects customers, vendors, agents, logistics partners and financial service providers through one digital ecosystem.
+                </p>
+                
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-2">
+                    <a href="{{ route('services') }}#marketplace" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A85A] hover:bg-[#C5A85A]/90 text-[#0D0C0A] font-bold rounded-xl shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Start Shopping</span>
+                    </a>
+                    <a href="{{ route('vendors') }}" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-[#0D0C0A] hover:bg-[#0D0C0A]/90 text-[#FAF8F5] font-bold rounded-xl shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Become a Vendor</span>
+                    </a>
+                    <a href="{{ route('agents') }}" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white border border-[#0D0C0A]/10 hover:border-[#0D0C0A] text-[#0D0C0A] font-bold rounded-xl shadow-sm transition duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Become an Agent</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Graphic Column (Composite Image) -->
+            <div class="lg:col-span-6 relative flex justify-center items-center">
+                <!-- Outer glow rings -->
+                <div class="absolute w-[120%] h-[120%] rounded-full bg-[#C5A85A]/5 filter blur-3xl pointer-events-none"></div>
+                
+                <div class="relative w-full max-w-md sm:max-w-xl flex items-center justify-center">
+                    <img src="{{ asset('images/hero_composite.png') }}" alt="LotusRise Ecosystem Mockup" 
+                        class="w-full h-auto rounded-3xl object-cover shadow-2xl border border-gray-100/30">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Section 4 – Capabilities Grid (5 Columns) -->
+<section class="py-20 bg-[#FAF8F5] border-t border-[#1D1B18]/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            
+            <!-- Card 1: Marketplace -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center group-hover:bg-[#C5A85A] group-hover:text-[#0D0C0A] transition duration-300">
+                        <i class="fa-solid fa-bag-shopping text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-[#0D0C0A] tracking-tight">LotusRise Marketplace</h3>
+                    <p class="text-xs text-[#1D1B18]/60 leading-relaxed">Buy products from verified vendors across multiple categories.</p>
+                </div>
+                <a href="{{ route('services') }}#marketplace" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#C5A85A] hover:text-[#0D0C0A] mt-6 transition">
+                    <span>Shop Now</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 2: Logistics -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center group-hover:bg-[#C5A85A] group-hover:text-[#0D0C0A] transition duration-300">
+                        <i class="fa-solid fa-truck text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-[#0D0C0A] tracking-tight">LotusRise Logistics</h3>
+                    <p class="text-xs text-[#1D1B18]/60 leading-relaxed">Source, ship and deliver products locally and internationally.</p>
+                </div>
+                <a href="{{ route('services') }}#logistics" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#C5A85A] hover:text-[#0D0C0A] mt-6 transition">
+                    <span>Learn More</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 3: Investment Rewards -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center group-hover:bg-[#C5A85A] group-hover:text-[#0D0C0A] transition duration-300">
+                        <i class="fa-solid fa-gift text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-[#0D0C0A] tracking-tight">Investment Rewards</h3>
+                    <p class="text-xs text-[#1D1B18]/60 leading-relaxed">Earn cashback and rewards that can be directed to licensed investment providers.</p>
+                </div>
+                <a href="{{ route('services') }}#investment" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#C5A85A] hover:text-[#0D0C0A] mt-6 transition">
+                    <span>Explore Rewards</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 4: Business Solutions -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center group-hover:bg-[#C5A85A] group-hover:text-[#0D0C0A] transition duration-300">
+                        <i class="fa-solid fa-briefcase text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-[#0D0C0A] tracking-tight">Business Solutions</h3>
+                    <p class="text-xs text-[#1D1B18]/60 leading-relaxed">Powerful tools for vendors, agents and businesses to manage operations efficiently.</p>
+                </div>
+                <a href="{{ route('services') }}#vendor-solutions" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#C5A85A] hover:text-[#0D0C0A] mt-6 transition">
+                    <span>Discover Solutions</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 5: Agent Network -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center group-hover:bg-[#C5A85A] group-hover:text-[#0D0C0A] transition duration-300">
+                        <i class="fa-solid fa-users text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-[#0D0C0A] tracking-tight">Agent Network</h3>
+                    <p class="text-xs text-[#1D1B18]/60 leading-relaxed">Join our agent network and earn income by serving customers and vendors.</p>
+                </div>
+                <a href="{{ route('agents') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#C5A85A] hover:text-[#0D0C0A] mt-6 transition">
+                    <span>Join Now</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section 5 – How LotusRise Works -->
+<section class="py-20 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0D0C0A] tracking-tight">How LotusRise Works</h2>
+        </div>
+
+        <!-- Flow wrapper -->
+        <div class="flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-4 relative">
+            
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center text-center space-y-3 flex-1">
+                <div class="w-12 h-12 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center text-lg shadow-sm border border-[#C5A85A]/25">
+                    <i class="fa-regular fa-file-lines"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest font-extrabold text-[#C5A85A]">Step 1</span>
+                    <p class="text-xs text-[#1D1B18]/70 leading-relaxed max-w-[180px] mt-1">Customer submits request or places order.</p>
+                </div>
+            </div>
+
+            <!-- Arrow 1 -->
+            <div class="hidden lg:flex text-gray-300 text-lg"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="flex lg:hidden text-gray-300 text-lg rotate-90"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center text-center space-y-3 flex-1">
+                <div class="w-12 h-12 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center text-lg shadow-sm border border-[#C5A85A]/25">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest font-extrabold text-[#C5A85A]">Step 2</span>
+                    <p class="text-xs text-[#1D1B18]/70 leading-relaxed max-w-[180px] mt-1">Vendor confirms availability.</p>
+                </div>
+            </div>
+
+            <!-- Arrow 2 -->
+            <div class="hidden lg:flex text-gray-300 text-lg"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="flex lg:hidden text-gray-300 text-lg rotate-90"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center text-center space-y-3 flex-1">
+                <div class="w-12 h-12 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center text-lg shadow-sm border border-[#C5A85A]/25">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest font-extrabold text-[#C5A85A]">Step 3</span>
+                    <p class="text-xs text-[#1D1B18]/70 leading-relaxed max-w-[180px] mt-1">Payment is completed.</p>
+                </div>
+            </div>
+
+            <!-- Arrow 3 -->
+            <div class="hidden lg:flex text-gray-300 text-lg"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="flex lg:hidden text-gray-300 text-lg rotate-90"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center text-center space-y-3 flex-1">
+                <div class="w-12 h-12 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center text-lg shadow-sm border border-[#C5A85A]/25">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest font-extrabold text-[#C5A85A]">Step 4</span>
+                    <p class="text-xs text-[#1D1B18]/70 leading-relaxed max-w-[180px] mt-1">Logistics partner delivers.</p>
+                </div>
+            </div>
+
+            <!-- Arrow 4 -->
+            <div class="hidden lg:flex text-gray-300 text-lg"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="flex lg:hidden text-gray-300 text-lg rotate-90"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <!-- Step 5 -->
+            <div class="flex flex-col items-center text-center space-y-3 flex-1">
+                <div class="w-12 h-12 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center text-lg shadow-sm border border-[#C5A85A]/25">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest font-extrabold text-[#C5A85A]">Step 5</span>
+                    <p class="text-xs text-[#1D1B18]/70 leading-relaxed max-w-[180px] mt-1">Customer receives order and earns rewards.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section 7 – Portfolio -->
+<section class="py-24 bg-[#0D0C0A] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-16">
+            <div class="space-y-3">
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Our Portfolio</h2>
+            </div>
+            <a href="{{ route('portfolio') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A85A] hover:underline">
+                <span>View All Projects</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+
+        <!-- Portfolio Cards Grid (4 Columns) with Image backgrounds -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1: Retail & E-Commerce -->
+            <div class="relative rounded-2xl overflow-hidden h-80 border border-white/10 group flex flex-col justify-end p-6 shadow-md hover:border-[#C5A85A]/40 transition duration-300">
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+                     style="background-image: url('{{ asset('images/portfolio_retail.png') }}');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+                
+                <!-- Content -->
+                <div class="relative z-10 space-y-2">
+                    <span class="text-[9px] uppercase font-bold text-[#C5A85A] tracking-wider block">Retail & E-Commerce</span>
+                    <h3 class="text-base font-bold text-white leading-tight">Retail & E-Commerce</h3>
+                    <p class="text-xs text-white/70 leading-relaxed line-clamp-2">Empowering vendors and brands to reach more customers.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Logistics & Delivery -->
+            <div class="relative rounded-2xl overflow-hidden h-80 border border-white/10 group flex flex-col justify-end p-6 shadow-md hover:border-[#C5A85A]/40 transition duration-300">
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+                     style="background-image: url('{{ asset('images/portfolio_logistics.png') }}');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+                
+                <!-- Content -->
+                <div class="relative z-10 space-y-2">
+                    <span class="text-[9px] uppercase font-bold text-[#C5A85A] tracking-wider block">Logistics & Delivery</span>
+                    <h3 class="text-base font-bold text-white leading-tight">Logistics & Delivery</h3>
+                    <p class="text-xs text-white/70 leading-relaxed line-clamp-2">Reliable logistics solutions that connect people and businesses.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Investment & Finance -->
+            <div class="relative rounded-2xl overflow-hidden h-80 border border-white/10 group flex flex-col justify-end p-6 shadow-md hover:border-[#C5A85A]/40 transition duration-300">
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+                     style="background-image: url('{{ asset('images/portfolio_finance.png') }}');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+                
+                <!-- Content -->
+                <div class="relative z-10 space-y-2">
+                    <span class="text-[9px] uppercase font-bold text-[#C5A85A] tracking-wider block">Investment & Finance</span>
+                    <h3 class="text-base font-bold text-white leading-tight">Investment & Finance</h3>
+                    <p class="text-xs text-white/70 leading-relaxed line-clamp-2">Helping customers grow through smart investment opportunities.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Business Solutions -->
+            <div class="relative rounded-2xl overflow-hidden h-80 border border-white/10 group flex flex-col justify-end p-6 shadow-md hover:border-[#C5A85A]/40 transition duration-300">
+                <!-- Background Image & Overlay -->
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+                     style="background-image: url('{{ asset('images/portfolio_business.png') }}');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+                
+                <!-- Content -->
+                <div class="relative z-10 space-y-2">
+                    <span class="text-[9px] uppercase font-bold text-[#C5A85A] tracking-wider block">Business Solutions</span>
+                    <h3 class="text-base font-bold text-white leading-tight">Business Solutions</h3>
+                    <p class="text-xs text-white/70 leading-relaxed line-clamp-2">Digital tools and services that simplify and grow your business.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Section 8 – Statistics -->
+<section class="bg-[#0D0C0A] py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-8 text-center text-white">
+        
+        <div class="flex flex-col items-center justify-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-users text-[#C5A85A] text-lg"></i>
+                <span class="text-3xl font-extrabold text-[#C5A85A]">{{ $counts['customers'] }}</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-wider text-white/40 font-bold">Happy Customers</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-store text-[#C5A85A] text-lg"></i>
+                <span class="text-3xl font-extrabold text-[#C5A85A]">{{ $counts['vendors'] }}</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-wider text-white/40 font-bold">Verified Vendors</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-globe text-[#C5A85A] text-lg"></i>
+                <span class="text-3xl font-extrabold text-[#C5A85A]">{{ $counts['countries'] }}</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-wider text-white/40 font-bold">Countries Reached</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-truck text-[#C5A85A] text-lg"></i>
+                <span class="text-3xl font-extrabold text-[#C5A85A]">{{ $counts['deliveries'] }}</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-wider text-white/40 font-bold">Deliveries Completed</span>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 flex flex-col items-center justify-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-[#C5A85A] text-lg"></i>
+                <span class="text-3xl font-extrabold text-[#C5A85A]">{{ $counts['transactions'] }}</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-wider text-white/40 font-bold">Transactions Processed</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- Section 9 – Testimonials -->
+<section class="py-24 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 class="text-xs uppercase tracking-[0.2em] font-extrabold text-[#C5A85A]">Success Stories</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold text-[#0D0C0A] tracking-tight">Voices of the Ecosystem</p>
+            <p class="text-base text-[#1D1B18]/70">Read how vendors, agents, and business owners have scaled using our unified platform.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Vendor Story -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm space-y-6">
+                <div class="flex gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm text-[#1D1B18]/75 leading-relaxed italic">
+                    "Before joining LotusRise, sourcing orders from Mbeya and Kigoma was extremely manual. Now, my bulk electronics inventory is listed online, and deliveries are coordinated automatically. My wholesale volume has doubled."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center font-bold text-xs">AJ</div>
+                    <div>
+                        <span class="block font-bold text-sm text-[#0D0C0A]">Athumani Juma</span>
+                        <span class="text-xs text-[#1D1B18]/50">Owner, Kariakoo Wholesale Ltd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Story -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm space-y-6">
+                <div class="flex gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm text-[#1D1B18]/75 leading-relaxed italic">
+                    "Working as an agent in Mwanza is amazing. I help local retailers order stock safely from Dar, track the shipments, and earn reliable weekly commission checks. The training provided helped me grow my client list."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center font-bold text-xs">SJ</div>
+                    <div>
+                        <span class="block font-bold text-sm text-[#0D0C0A]">Sarah Joseph</span>
+                        <span class="text-xs text-[#1D1B18]/50">LotusRise Agent, Nyamagana</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Story -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm space-y-6">
+                <div class="flex gap-1 text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm text-[#1D1B18]/75 leading-relaxed italic">
+                    "Procuring products from Kariakoo was always risky. LotusRise escrow payments gave me total peace of mind. The delivery consolidation service saved me 40% on cargo shipping fees."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[#C5A85A]/10 text-[#C5A85A] flex items-center justify-center font-bold text-xs">DM</div>
+                    <div>
+                        <span class="block font-bold text-sm text-[#0D0C0A]">David Minja</span>
+                        <span class="text-xs text-[#1D1B18]/50">Retail Shop Owner, Dodoma</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section 10 – Call to Action -->
+<section class="py-24 bg-[#0D0C0A] text-white border-t border-white/5 relative">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Ready to grow with LotusRise?</h2>
+        <p class="text-base text-white/60 max-w-xl mx-auto leading-relaxed">Join Tanzania's leading digital commerce, sourcing, and logistics ecosystem. Get started today as a merchant or local agent.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="{{ route('vendors') }}" class="w-full sm:w-auto px-8 py-4 bg-[#C5A85A] hover:bg-[#C5A85A]/90 text-[#0D0C0A] font-bold rounded-xl shadow-md transition duration-200">
+                Become a Vendor
+            </a>
+            <a href="{{ route('agents') }}" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/10 transition duration-200">
+                Become an Agent
+            </a>
+            <a href="{{ route('contact') }}" class="w-full sm:w-auto px-8 py-4 bg-transparent hover:underline text-[#C5A85A] font-bold transition">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+@endsection
