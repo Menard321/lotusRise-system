@@ -49,39 +49,84 @@
                 </div>
             </div>
             
-            <!-- Right Graphic Column (Composite Multi-Scene Slider) -->
-            <div class="lg:col-span-6 relative flex flex-col justify-center items-center">
-                <!-- Outer glow rings -->
-                <div class="absolute w-[120%] h-[120%] rounded-full bg-[#C5A85A]/5 filter blur-3xl pointer-events-none"></div>
-                
-                <div class="relative w-full max-w-md sm:max-w-xl aspect-square flex items-center justify-center">
-                    <!-- Card Scene 1: Shop Smart -->
-                    <div id="img-scene-0" class="absolute inset-0 transition-scene opacity-100 scale-100 translate-x-0 z-10 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
-                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
-                            <img src="{{ asset('images/lotusRise_shop_ecosystem.png') }}" alt="Shop Smart - E-Commerce Ecosystem" 
-                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+            <!-- Right Graphic Column – Arch Scene -->
+            <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
+
+                <!-- Arch backdrop SVG -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+                    <svg viewBox="0 0 520 580" class="w-full max-w-lg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M60 580 L60 240 Q60 30 260 30 Q460 30 460 240 L460 580 Z" fill="#EDE8E0" opacity="0.65"/>
+                        <path d="M80 580 L80 248 Q80 60 260 60 Q440 60 440 248 L440 580 Z" fill="#F2EDE6" opacity="0.45"/>
+                    </svg>
+                </div>
+
+                <!-- Scene wrapper -->
+                <div class="relative w-full max-w-lg" style="min-height: 440px;">
+
+                    <!-- Scene 1: Shop Smart – Analytics Tablet + Coins -->
+                    <div id="img-scene-0" class="transition-scene absolute inset-0 opacity-100 scale-100 translate-x-0 z-10 flex items-end justify-center pb-4">
+                        <!-- Stacked coin tower left -->
+                        <div class="absolute bottom-8 left-6 flex flex-col items-center gap-[3px] pointer-events-none z-20">
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm border-t border-[#F0D880]/60"></div>
                         </div>
-                    </div>
-                    
-                    <!-- Card Scene 2: Earn Smart -->
-                    <div id="img-scene-1" class="absolute inset-0 transition-scene opacity-0 scale-95 translate-x-8 z-0 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
-                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
-                            <img src="{{ asset('images/lotusRise_express_logistics.jpg') }}" alt="Earn Smart - Logistics & Fleet" 
-                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <!-- Shorter coin stack left-center -->
+                        <div class="absolute bottom-4 left-20 flex flex-col items-center gap-[3px] pointer-events-none z-20 rotate-6">
+                            <div class="w-9 h-[6px] rounded-full bg-gradient-to-r from-[#D4AF5A] via-[#B8952A] to-[#8A6A1E] shadow-sm"></div>
+                            <div class="w-9 h-[6px] rounded-full bg-gradient-to-r from-[#D4AF5A] via-[#B8952A] to-[#8A6A1E] shadow-sm"></div>
+                            <div class="w-9 h-[6px] rounded-full bg-gradient-to-r from-[#D4AF5A] via-[#B8952A] to-[#8A6A1E] shadow-sm"></div>
                         </div>
+                        <!-- Flat scattered coins -->
+                        <div class="absolute bottom-2 left-36 w-9 h-9 rounded-full bg-gradient-to-br from-[#F0D880] via-[#C5A85A] to-[#8A6A1E] shadow-lg border border-[#E8C96A]/50 pointer-events-none z-20" style="box-shadow: inset 0 2px 4px rgba(255,220,100,0.4)"></div>
+                        <div class="absolute bottom-6 right-10 w-10 h-10 rounded-full bg-gradient-to-br from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-lg border border-[#F0D880]/40 pointer-events-none z-20" style="box-shadow: inset 0 2px 5px rgba(255,220,100,0.4)"></div>
+                        <div class="absolute bottom-1 right-24 w-7 h-7 rounded-full bg-gradient-to-br from-[#D4AF5A] to-[#8A6A1E] shadow-md pointer-events-none z-20"></div>
+                        <div class="absolute bottom-14 right-6 w-5 h-5 rounded-full bg-gradient-to-br from-[#C5A85A] to-[#7A5A10] shadow-sm pointer-events-none z-20 opacity-70"></div>
+                        <!-- Tablet image (no card border) -->
+                        <img src="{{ asset('images/lotusRise_analytics_growth.png') }}"
+                             alt="Financial Analytics Dashboard"
+                             class="relative z-10 w-[78%] max-w-xs drop-shadow-2xl transition-transform duration-700 hover:scale-105"
+                             style="filter: drop-shadow(0 20px 45px rgba(197,168,90,0.25)); transform-origin: bottom center;">
                     </div>
-                    
-                    <!-- Card Scene 3: Grow Smart -->
-                    <div id="img-scene-2" class="absolute inset-0 transition-scene opacity-0 scale-95 translate-x-8 z-0 p-4 bg-white/70 backdrop-blur-md rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/60 hover-tilt-effect">
-                        <div class="w-full h-full overflow-hidden rounded-[1.75rem]">
-                            <img src="{{ asset('images/lotusRise_analytics_growth.png') }}" alt="Grow Smart - Vendor Analytics" 
-                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+
+                    <!-- Scene 2: Earn Smart – Logistics -->
+                    <div id="img-scene-1" class="transition-scene absolute inset-0 opacity-0 scale-95 translate-x-8 z-0 flex items-end justify-center pb-4">
+                        <div class="absolute bottom-8 left-6 flex flex-col items-center gap-[3px] pointer-events-none z-20">
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
                         </div>
+                        <div class="absolute bottom-4 right-10 w-8 h-8 rounded-full bg-gradient-to-br from-[#E8C96A] to-[#9A7A2E] shadow-md pointer-events-none z-20"></div>
+                        <div class="absolute bottom-2 right-20 w-6 h-6 rounded-full bg-gradient-to-br from-[#C5A85A] to-[#8A6A1E] shadow-sm pointer-events-none z-20"></div>
+                        <img src="{{ asset('images/lotusRise_express_logistics.jpg') }}"
+                             alt="Earn Smart - Logistics & Fleet"
+                             class="relative z-10 w-[78%] max-w-xs rounded-3xl drop-shadow-2xl transition-transform duration-700 hover:scale-105"
+                             style="filter: drop-shadow(0 20px 45px rgba(197,168,90,0.25)); transform-origin: bottom center;">
                     </div>
+
+                    <!-- Scene 3: Grow Smart -->
+                    <div id="img-scene-2" class="transition-scene absolute inset-0 opacity-0 scale-95 translate-x-8 z-0 flex items-end justify-center pb-4">
+                        <div class="absolute bottom-8 right-6 flex flex-col items-center gap-[3px] pointer-events-none z-20">
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                            <div class="w-10 h-[7px] rounded-full bg-gradient-to-r from-[#E8C96A] via-[#C5A85A] to-[#9A7A2E] shadow-sm"></div>
+                        </div>
+                        <div class="absolute bottom-4 left-10 w-9 h-9 rounded-full bg-gradient-to-br from-[#E8C96A] to-[#9A7A2E] shadow-md pointer-events-none z-20"></div>
+                        <div class="absolute bottom-1 left-20 w-6 h-6 rounded-full bg-gradient-to-br from-[#C5A85A] to-[#8A6A1E] shadow-sm pointer-events-none z-20"></div>
+                        <img src="{{ asset('images/lotusRise_shop_ecosystem.png') }}"
+                             alt="Grow Smart - Vendor Analytics"
+                             class="relative z-10 w-[78%] max-w-xs drop-shadow-2xl transition-transform duration-700 hover:scale-105"
+                             style="filter: drop-shadow(0 20px 45px rgba(197,168,90,0.25)); transform-origin: bottom center;">
+                    </div>
+
                 </div>
 
                 <!-- Interactive Progress Indicators (Pills) -->
-                <div class="flex justify-center items-center gap-3 mt-8 z-20">
+                <div class="flex justify-center items-center gap-3 mt-4 z-20 relative">
                     <button id="indicator-pill-0" class="group relative w-16 h-1.5 rounded-full bg-black/10 overflow-hidden focus:outline-none transition hover:bg-black/20" title="Shop Smart">
                         <span class="progress-pill-fill absolute left-0 top-0 bottom-0 w-0 bg-[#C5A85A] rounded-full"></span>
                     </button>
