@@ -73,45 +73,7 @@
                 </div>
             </div>
         </form>
-
-        <!-- Credentials Quick Access (Testing Helper) -->
-        <div class="mt-8 pt-6 border-t border-[#FAF8F5]/10 space-y-3">
-            <span class="block text-xs font-bold text-[#C5A85A] uppercase tracking-wider text-center">Demo Quick Login Credentials</span>
-            <div class="grid grid-cols-1 gap-2 text-xs text-[#FAF8F5]/65">
-                <div class="p-2.5 rounded-lg bg-[#13110E] border border-[#FAF8F5]/5 flex justify-between items-center">
-                    <div>
-                        <span class="block font-semibold text-[#FAF8F5]">Administrator</span>
-                        <span>admin@lotusriseglobal.com</span>
-                    </div>
-                    <button type="button" onclick="fillForm('admin@lotusriseglobal.com')" class="text-[#C5A85A] hover:underline font-medium">Use</button>
-                </div>
-                <div class="p-2.5 rounded-lg bg-[#13110E] border border-[#FAF8F5]/5 flex justify-between items-center">
-                    <div>
-                        <span class="block font-semibold text-[#FAF8F5]">Verified Vendor</span>
-                        <span>vendor@lotusriseglobal.com</span>
-                    </div>
-                    <button type="button" onclick="fillForm('vendor@lotusriseglobal.com')" class="text-[#C5A85A] hover:underline font-medium">Use</button>
-                </div>
-                <div class="p-2.5 rounded-lg bg-[#13110E] border border-[#FAF8F5]/5 flex justify-between items-center">
-                    <div>
-                        <span class="block font-semibold text-[#FAF8F5]">Registered Agent</span>
-                        <span>agent@lotusriseglobal.com</span>
-                    </div>
-                    <button type="button" onclick="fillForm('agent@lotusriseglobal.com')" class="text-[#C5A85A] hover:underline font-medium">Use</button>
-                </div>
-            </div>
-            <p class="text-[10px] text-center text-[#FAF8F5]/40">Password for all test accounts is <strong class="text-[#C5A85A]">password</strong></p>
-        </div>
         
     </div>
 </div>
-@endsection
-
-@section('scripts')
-<script>
-    function fillForm(email) {
-        document.getElementById('email').value = email;
-        document.getElementById('password').value = 'password';
-    }
-</script>
 @endsection

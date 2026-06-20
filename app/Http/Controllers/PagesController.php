@@ -51,7 +51,7 @@ class PagesController extends Controller
 
         $team = [
             ['name' => 'Menard L. Rose', 'role' => 'Chief Executive Officer', 'image' => '/images/menard.png'],
-            ['name' => 'Fatuma Bakari', 'role' => 'Director of Logistics & Operations', 'image' => '/images/fatuma.png'],
+            ['name' => 'Fatuma Bakari', 'role' => 'Director of Logistics & Operations', 'image' => '/images/Asia.png.jpeg'],
             ['name' => 'Emmanuel Minja', 'role' => 'Head of Technology & Product', 'image' => '/images/emmanuel.png'],
         ];
 

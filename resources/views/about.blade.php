@@ -66,7 +66,7 @@
 </section>
 
 <!-- Section Leadership Team -->
-<<section id="team" class="py-24 bg-[#FAF8F5] border-t border-[#1D1B18]/5">
+<section id="team" class="py-24 bg-[#FAF8F5] border-t border-[#1D1B18]/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -76,37 +76,17 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+            @foreach($team as $member)
             <div class="bg-white rounded-3xl overflow-hidden border border-[#1D1B18]/5 shadow-sm text-center flex flex-col group">
                 <div class="aspect-square bg-gray-100 relative overflow-hidden shrink-0">
-                    <img src="/images/menard.jpg" alt="Menard Joseph" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h4 class="text-lg font-bold text-[#0D0C0A]">Menard Joseph</h4>
-                    <span class="text-xs text-[#C5A85A] font-semibold mt-1 block">IT</span>
+                    <h4 class="text-lg font-bold text-[#0D0C0A]">{{ $member['name'] }}</h4>
+                    <span class="text-xs text-[#C5A85A] font-semibold mt-1 block">{{ $member['role'] }}</span>
                 </div>
             </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden border border-[#1D1B18]/5 shadow-sm text-center flex flex-col group">
-                <div class="aspect-square bg-gray-100 relative overflow-hidden shrink-0">
-                    <img src="/images/po.jpg" alt="Team Member Name" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="p-6">
-                    <h4 class="text-lg font-bold text-[#0D0C0A]">Team Member Name</h4>
-                    <span class="text-xs text-[#C5A85A] font-semibold mt-1 block">Operations</span>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden border border-[#1D1B18]/5 shadow-sm text-center flex flex-col group">
-                <div class="aspect-square bg-gray-100 relative overflow-hidden shrink-0">
-                    <img src="/images/team3.jpg" alt="Team Member Name" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-                <div class="p-6">
-                    <h4 class="text-lg font-bold text-[#0D0C0A]">Team Member Name</h4>
-                    <span class="text-xs text-[#C5A85A] font-semibold mt-1 block">Logistics Management</span>
-                </div>
-            </div>
-
+            @endforeach
         </div> </div>
 </section>
 

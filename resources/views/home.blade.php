@@ -458,6 +458,189 @@
     </div>
 </section>
 
+<!-- Section – Global Infrastructure & Supply Chain Footprint -->
+<section class="py-24 bg-white border-t border-gray-100">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+        .font-serif-editorial {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+    </style>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- SECTION HEADER: Center-aligned typography stack -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#C5A85A]/30 bg-[#C5A85A]/5 text-[#C5A85A] text-[10px] uppercase tracking-[0.2em] font-extrabold">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C5A85A] animate-pulse"></span>
+                REGIONAL GRID & SUPPLY CHAIN
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-normal font-serif-editorial text-[#0D0C0A] tracking-tight leading-tight">
+                Our Digital & Physical Footprint
+            </h2>
+            <p class="text-sm sm:text-base text-[#13110E]/70 max-w-2xl mx-auto leading-relaxed font-sans font-light">
+                Connecting localized Tanzanian commerce hubs to regional East African economic corridors and international supply chains.
+            </p>
+        </div>
+
+        <!-- THE VECTOR INFRASTRUCTURE MAP CONTAINER -->
+        <div class="relative w-full aspect-[16/9] border border-[#C5A85A]/15 bg-[#FAF8F5] rounded-[2rem] overflow-hidden shadow-inner flex items-center justify-center p-4">
+            
+            <!-- Map Grid Overlay -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#000/0.02_1px,transparent_1px),linear-gradient(to_bottom,#000/0.02_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
+
+            <!-- Stylized Minimalist SVG Map of East Africa & Tanzania -->
+            <svg viewBox="0 0 1000 562" class="w-full h-full text-slate-200 fill-current opacity-90" xmlns="http://www.w3.org/2000/svg">
+                <!-- Regional Landmasses (Minimalist Abstract Polygons for Africa & East Africa) -->
+                <path d="M150 50 L350 70 L480 180 L520 280 L500 350 L420 480 L380 540 L340 540 L300 480 L220 380 L180 320 L150 250 L120 180 Z" fill="#EAE6DF" opacity="0.4" />
+                
+                <!-- Tanzania Highlight -->
+                <path d="M380 300 Q430 330 450 370 Q430 430 390 440 Q340 400 350 330 Z" fill="#EDE8E0" stroke="#C5A85A]/10" stroke-width="2" />
+                
+                <!-- Sweeping Corridors (Golden sweep arc routes) -->
+                <!-- Dar es Salaam (approx X:420, Y:390) outward: -->
+                <!-- 1. Dodoma (X:380, Y:360) -->
+                <path d="M420 390 Q400 370 380 360" fill="none" stroke="#C5A85A" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8" />
+                <!-- 2. Arusha (X:390, Y:320) -->
+                <path d="M420 390 Q400 350 390 320" fill="none" stroke="#C5A85A" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8" />
+                <!-- 3. Zanzibar (X:440, Y:380) -->
+                <path d="M420 390 Q430 385 440 380" fill="none" stroke="#C5A85A" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8" />
+                <!-- 4. Mwanza (X:340, Y:310) -->
+                <path d="M420 390 Q380 340 340 310" fill="none" stroke="#C5A85A" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8" />
+                
+                <!-- Cross-Border Routes -->
+                <!-- Nairobi Link (X:415, Y:290) -->
+                <path d="M420 390 Q430 330 415 290" fill="none" stroke="#C5A85A" stroke-width="2" opacity="0.5" />
+                <!-- Kampala Link (X:320, Y:270) -->
+                <path d="M420 390 Q360 310 320 270" fill="none" stroke="#C5A85A" stroke-width="2" opacity="0.5" />
+                <!-- Kigali Link (X:290, Y:300) -->
+                <path d="M420 390 Q340 330 290 300" fill="none" stroke="#C5A85A" stroke-width="2" opacity="0.5" />
+            </svg>
+
+            <!-- Pulsing Pins & Interactive Tooltips -->
+            <!-- Dar es Salaam HQ -->
+            <div class="absolute" style="top: 66%; left: 42%;">
+                <span class="flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A85A] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-5 w-5 bg-[#C5A85A] border-2 border-white shadow-md"></span>
+                </span>
+                <div class="absolute -top-12 left-3 -translate-y-1/2 bg-white/95 backdrop-blur-md border border-[#C5A85A]/20 px-3.5 py-2 rounded-xl shadow-lg flex items-center gap-2 whitespace-nowrap z-20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#C5A85A]"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-[#0D0C0A]">Dar es Salaam HQ</span>
+                </div>
+            </div>
+
+            <!-- Dodoma Node -->
+            <div class="absolute" style="top: 61%; left: 38%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0D0C0A] border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute top-2 left-2 -translate-x-1/2 bg-white/80 backdrop-blur-sm border border-gray-100 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#13110E]/60">Dodoma</span>
+                </div>
+            </div>
+
+            <!-- Arusha Node -->
+            <div class="absolute" style="top: 54%; left: 39%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0D0C0A] border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute -top-6 -translate-x-1/2 bg-white/80 backdrop-blur-sm border border-gray-100 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#13110E]/60">Arusha</span>
+                </div>
+            </div>
+
+            <!-- Mwanza Node -->
+            <div class="absolute" style="top: 52%; left: 34%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0D0C0A] border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute -top-6 -translate-x-1/2 bg-white/80 backdrop-blur-sm border border-gray-100 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#13110E]/60">Mwanza</span>
+                </div>
+            </div>
+
+            <!-- Zanzibar Node -->
+            <div class="absolute" style="top: 65%; left: 44%;">
+                <span class="flex h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#C5A85A] border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute top-2 left-2 bg-white/80 backdrop-blur-sm border border-gray-100 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#13110E]/60">Zanzibar</span>
+                </div>
+            </div>
+
+            <!-- Nairobi Link -->
+            <div class="absolute" style="top: 48%; left: 41.5%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#C5A85A]/50 border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute -top-6 -translate-x-1/2 bg-white/85 border border-[#C5A85A]/20 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#C5A85A]">Nairobi Link</span>
+                </div>
+            </div>
+
+            <!-- Kampala Link -->
+            <div class="absolute" style="top: 45%; left: 32%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#C5A85A]/50 border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute -top-6 -translate-x-1/2 bg-white/85 border border-[#C5A85A]/20 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#C5A85A]">Kampala Link</span>
+                </div>
+            </div>
+
+            <!-- Kigali Link -->
+            <div class="absolute" style="top: 50%; left: 29%;">
+                <span class="flex h-3 w-3 -translate-x-1/2 -translate-y-1/2 relative">
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#C5A85A]/50 border border-white shadow-sm"></span>
+                </span>
+                <div class="absolute -top-6 -translate-x-1/2 bg-white/85 border border-[#C5A85A]/20 px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">
+                    <span class="text-[8px] font-bold uppercase tracking-wider text-[#C5A85A]">Kigali Link</span>
+                </div>
+            </div>
+
+            <!-- THE HUB CONTEXT OVERLAY FOOTER -->
+            <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/85 backdrop-blur-md border border-[#C5A85A]/20 rounded-2xl p-4 md:p-6 shadow-lg z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-gray-200/50">
+                    
+                    <div class="space-y-1 pt-3 md:pt-0 md:px-4 first:pt-0 first:px-0">
+                        <div class="flex items-center gap-2 text-[#C5A85A]">
+                            <i class="fa-solid fa-map-location-dot text-xs"></i>
+                            <span class="text-[9px] uppercase tracking-widest font-extrabold">Domestic Network</span>
+                        </div>
+                        <p class="text-xs text-[#0D0C0A] font-medium leading-relaxed">
+                            20+ Regions Served across mainland Tanzania & Zanzibar.
+                        </p>
+                    </div>
+
+                    <div class="space-y-1 pt-3 md:pt-0 md:px-6">
+                        <div class="flex items-center gap-2 text-[#C5A85A]">
+                            <i class="fa-solid fa-earth-africa text-xs"></i>
+                            <span class="text-[9px] uppercase tracking-widest font-extrabold">Cross-Border</span>
+                        </div>
+                        <p class="text-xs text-[#0D0C0A] font-medium leading-relaxed">
+                            High-capacity transit routing supporting East African expansion.
+                        </p>
+                    </div>
+
+                    <div class="space-y-1 pt-3 md:pt-0 md:px-6">
+                        <div class="flex items-center gap-2 text-[#C5A85A]">
+                            <i class="fa-solid fa-warehouse text-xs"></i>
+                            <span class="text-[9px] uppercase tracking-widest font-extrabold">Fulfillment</span>
+                        </div>
+                        <p class="text-xs text-[#0D0C0A] font-medium leading-relaxed">
+                            Strategic pickup integration from regional commercial centers.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 <!-- Section 9 – Testimonials -->
 <section class="py-24 bg-[#FAF8F5]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

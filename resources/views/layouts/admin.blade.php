@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,6 +18,9 @@
     <style>
         body {
             font-family: 'Instrument Sans', sans-serif;
+        }
+        .font-serif-editorial {
+            font-family: 'Cormorant Garamond', Georgia, serif;
         }
     </style>
 </head>
@@ -35,57 +38,57 @@
                 </div>
                 <div class="flex flex-col">
                     <span class="text-lg font-bold tracking-tight text-[#FAF8F5] leading-none">LotusRise</span>
-                    <span class="text-[8px] uppercase tracking-[0.25em] font-semibold text-[#C5A85A] mt-0.5">Admin</span>
+                    <span class="text-[7px] uppercase tracking-[0.2em] font-bold text-[#C5A85A] mt-1 bg-[#C5A85A]/10 px-1.5 py-0.5 rounded border border-[#C5A85A]/25 leading-none">ADMIN PLATFORM</span>
                 </div>
             </a>
 
             <!-- Nav Links -->
-            <nav class="flex flex-col gap-1.5">
-                <span class="text-[10px] uppercase font-bold text-[#FAF8F5]/40 tracking-wider mb-2">Operations</span>
-                <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.dashboard') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-gauge w-5"></i>
+            <nav class="flex flex-col gap-1.5 relative">
+                <span class="text-[10px] uppercase font-bold text-[#FAF8F5]/40 tracking-wider mb-2 px-4">Operations</span>
+                <a href="{{ route('admin.dashboard') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.dashboard') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-gauge w-5 text-current"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="{{ route('admin.vendors') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.vendors') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-store w-5"></i>
+                <a href="{{ route('admin.vendors') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.vendors') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-store w-5 text-current"></i>
                     <span>Manage Vendors</span>
                 </a>
-                <a href="{{ route('admin.agents') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.agents') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-users-gear w-5"></i>
+                <a href="{{ route('admin.agents') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.agents') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-users-gear w-5 text-current"></i>
                     <span>Manage Agents</span>
                 </a>
-                <a href="{{ route('admin.inquiries') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.inquiries') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-envelope-open-text w-5"></i>
+                <a href="{{ route('admin.inquiries') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.inquiries') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-envelope-open-text w-5 text-current"></i>
                     <span>Inquiries / Leads</span>
                 </a>
 
-                <span class="text-[10px] uppercase font-bold text-[#FAF8F5]/40 tracking-wider mt-6 mb-2">Content</span>
-                <a href="{{ route('admin.portfolio') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.portfolio*') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-briefcase w-5"></i>
+                <span class="text-[10px] uppercase font-bold text-[#FAF8F5]/40 tracking-wider mt-6 mb-2 px-4">Content</span>
+                <a href="{{ route('admin.portfolio') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.portfolio*') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-briefcase w-5 text-current"></i>
                     <span>Portfolio</span>
                 </a>
-                <a href="{{ route('admin.blog') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition {{ request()->routeIs('admin.blog*') ? 'bg-[#C5A85A] text-[#0D0C0A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
-                    <i class="fa-solid fa-feather-pointed w-5"></i>
+                <a href="{{ route('admin.blog') }}" class="relative flex items-center gap-3 px-4 py-3 text-sm font-medium transition {{ request()->routeIs('admin.blog*') ? 'bg-[#C5A85A]/10 text-[#C5A85A] border-l-4 border-[#C5A85A]' : 'hover:bg-[#FAF8F5]/5 hover:text-[#FAF8F5]' }}">
+                    <i class="fa-solid fa-feather-pointed w-5 text-current"></i>
                     <span>Blog Posts</span>
                 </a>
             </nav>
         </div>
 
         <!-- User Profile Card -->
-        <div class="p-6 border-t border-[#FAF8F5]/10 flex flex-col gap-4">
+        <div class="p-6 border-t border-[#FAF8F5]/10 flex flex-col gap-4 bg-white/5 backdrop-blur-md rounded-2xl m-4">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#FAF8F5]/10 flex items-center justify-center text-[#C5A85A] font-bold">
+                <div class="w-10 h-10 rounded-full bg-[#C5A85A]/15 border border-[#C5A85A]/35 flex items-center justify-center text-[#C5A85A] font-bold">
                     A
                 </div>
                 <div class="flex flex-col truncate">
-                    <span class="text-sm font-semibold text-[#FAF8F5] leading-tight truncate">Administrator</span>
-                    <span class="text-xs text-[#C5A85A]">LotusRise Global</span>
+                    <span class="text-sm font-bold text-[#FAF8F5] leading-tight truncate">Administrator</span>
+                    <span class="text-[9px] uppercase tracking-wider text-[#C5A85A] font-bold">LotusRise Global</span>
                 </div>
             </div>
             <form action="{{ route('logout') }}" method="POST" class="w-full">
                 @csrf
-                <button type="submit" class="w-full py-2.5 rounded-xl border border-red-500/20 text-red-400 hover:bg-red-500/10 text-xs font-semibold transition">
-                    <i class="fa-solid fa-right-from-bracket mr-1.5"></i> Logout
+                <button type="submit" class="w-full py-2.5 rounded-xl border border-red-500/60 text-red-400 hover:bg-red-500 hover:text-white text-[10px] uppercase tracking-widest font-bold transition duration-200">
+                    LOG OUT SYSTEM
                 </button>
             </form>
         </div>
@@ -94,16 +97,19 @@
     <!-- Main Content Area -->
     <div class="flex-grow flex flex-col min-h-screen">
         <!-- Top Header -->
-        <header class="h-16 border-b border-[#1D1B18]/5 bg-[#FAF8F5] flex items-center justify-between px-6 shrink-0 shadow-sm">
+        <header class="h-20 border-b border-[#C5A85A]/15 bg-[#FAF8F5] flex items-center justify-between px-8 shrink-0 shadow-sm">
             <div class="flex items-center gap-4">
                 <button id="sidebar-toggle" class="text-[#0D0C0A] hover:text-[#C5A85A] md:hidden focus:outline-none">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <h1 class="text-lg font-semibold tracking-tight text-[#0D0C0A]">@yield('page_title', 'Admin Dashboard')</h1>
+                <div class="flex items-center gap-3.5">
+                    <h1 class="text-2xl font-light font-serif-editorial text-[#0D0C0A] tracking-tight leading-none">@yield('page_title', 'Admin Dashboard')</h1>
+                    @yield('page_title_badge')
+                </div>
             </div>
             <div class="flex items-center gap-3">
-                <a href="{{ route('home') }}" class="text-xs text-[#0D0C0A] bg-[#0D0C0A]/5 px-3 py-1.5 rounded-full border border-[#0D0C0A]/10 hover:bg-[#0D0C0A]/10 transition">
-                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>Visit Site
+                <a href="{{ route('home') }}" class="text-[10px] uppercase font-bold tracking-widest text-[#0D0C0A] border border-[#0D0C0A]/20 hover:border-[#0D0C0A] bg-white px-4 py-2.5 rounded-xl transition duration-200 shadow-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-[#C5A85A]"></i>Visit Live Portal
                 </a>
             </div>
         </header>
